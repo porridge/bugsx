@@ -12,14 +12,20 @@ export CFLAGS
 
 # dh_strip will take care of nostrip
 
-build: build-stamp
+include /usr/share/quilt/quilt.make
+-include /usr/share/topgit/tg2quilt.mk
+QUILT_STAMPFN = debian/stamp-patched
+
+build: $(QUILT_STAMPFN) build-stamp
 build-stamp:
 	dh_testdir
 	xmkmf
 	$(MAKE) CDEBUGFLAGS="-g -Wall" CCOPTIONS="$(CFLAGS)"
 	touch build-stamp
 
-clean:
+clean: clean-patched unpatch
+
+clean-patched:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp

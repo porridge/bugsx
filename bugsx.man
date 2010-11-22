@@ -1,4 +1,4 @@
-.TH BUGSX 1x X11
+.TH BUGSX 1 X11
 .SH NAME
 bugsx \- display and evolve biomorphs
 .SH DESCRIPTION

@@ -2,7 +2,7 @@ Source: bugsx
 Section: non-free/math
 Priority: optional
 Maintainer: Marcin Owsiany <porridge@debian.org>
-Build-Depends: debhelper (>> 5), libx11-dev, libxext-dev, xutils-dev
+Build-Depends: debhelper (>> 5), libx11-dev, libxext-dev, xutils-dev, quilt
 Standards-Version: 3.7.3
 
 Package: bugsx
