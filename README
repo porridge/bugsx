@@ -1,0 +1,337 @@
+			This is the README file for 
+
+
+                      BBBB   U   U  GGGGG  SSSSS  X   X 
+                      B   B  U   U  G      S       X X  
+                      BBBB   U   U  G GGG  SSSSS    X  
+                      B   B  U   U  G   G      S   X X  
+                      BBBB    UUU   GGGGG  SSSSS  X   X 
+
+
+
+1) Author & Copyright
+
+	bugsx was written by 
+
+		(C) Copyright 1995-1997 Robert Gasch (Robert_Gasch@peoplesoft.com)
+		http://www.peoplesoft.com/peoplepages/g/robert_gasch/index.htm
+
+		(C) Copyright 1990-1997 Joshua R. Smith (jrs@media.mit.edu) 
+		http://physics.www.media.mit.edu/~jrs
+
+	is copyright by the author(s). I (Robert_Gasch@peoplesoft.com) maintain 
+	the X11 port and Joshua maintains any other ports. See section 4 
+	and 17 for more info.
+
+2) Distribution Policy
+
+ 	Permission to use, copy, modify and distribute this software for
+	any purpose and without fee is hereby granted, provided that this
+	copyright notice appear in all copies as well as supporting 
+	documentation. All work developed as a consequence of the use of 
+	this program should duly acknowledge such use.
+
+	See the GNU General Public Licence for more information.
+
+	What does this mean?
+	This means that you can pretty much do with it what you want as 
+	long as you don't charge substantially more than the distribution 
+	costs for it (of course you have to make the source available). 
+
+	This makes software distributions like Walnut Creek or Infomagic 
+	perfectly acceptable. 
+
+	It does NOT matter wether you use it at home or in a comercial 
+	environment. 
+
+	If you want to include it in a major commercial distribution you 
+	need my permission to do so.
+
+3) Guarantees
+
+	bugsx should work all right *but*
+
+	No representations are made about the suitability of this software 
+	for any purpose. This software is provided "as is" without express 
+	or implied warranty.
+
+4) What is bugsx?
+
+	bugsx runs under MIT's X11 window system. It was written under 
+	UNIX but should be easily portable.  It is a program which draws 
+	the biomorphs based on parametric plots of Fourier sine and cosine
+        series and let's you play with them using the genetic algorithm.
+
+	The original version which ran under Suntools and XViews was 
+	written by Joshua R. Smith sometime 1990. See the 'credits' 
+	section for more details. 
+
+	For more information about the theoretic backgrounds of 
+	bugsx consult Joshua R. Smith's paper distributed with this 
+	program in gzip'ed postscript format as bugs.ps.gz. You have 
+	to uncompress this file with 'gunzip' before you can print it. 
+	Gunzip should be available at an archive near you.
+
+	The paper can also be gotten from:
+	http://physics.www.media.mit.edu/~jrs/biomorphs.ps
+
+	I (Robert_Gasch@peoplesoft.com) maintain the X11 port and 
+	Joshua (jrs@media.mit.edu) maintains any other ports. 
+	See section 4, and 17 for more info. 
+
+5) Version Number
+
+	The current version number is 1.08
+
+6) Where can I get Bugsx from?
+
+	Bugsx can be gotten from the following FTP sites:
+	media.mit.edu 	(/physics/dist/bugs)
+	ftp.x.org	(/contrib/applications)
+
+7) What if you change the program?
+
+	please mail me (Robert_Gasch@peoplesoft.com) the changes(!) as I'd like to 
+	act as the central source for bugsx. This will also enable me to 
+	include your changes in a future release. If your changes are 
+	generic, I'll pass the changes on so that other versions of BUGS 
+	can also benefit from your input.
+
+8) Systems currently supported
+
+	Any resonable UNIX-type system running X11 should be able to 
+	compile and run bugsx. I've tested it on the following 
+	systems:
+
+	Linux
+	AIX 
+
+9) How do I get started?
+
+	This section assumes that you have all the necessary files. (The 
+	file "Manifest" contains a list of distributed files.)
+
+	a) Customize the Imakefile to suit your system setup. On most systems 
+	this should work OK as it is.
+
+	b) Make the Makefile by typing 
+		xmkmf
+	If your system does not support generating makefiles from 
+	Imakefiles use "Makefile.std" as a template to build your
+	own. 
+
+	c) If your X headers do not define APP_DEFAULTS_DIR and your default 
+	X Resource file is not 
+		/usr/X11R6/lib/X11/app-defaults/
+	edit bugsx.h and modify the definition for APP_DEFAULTS_DIR. On 
+	most systems things should be OK the way they are, but this gives 
+	you the possibility to customize this.
+
+	d) Once you have a valid Makefile (see step a&b) build bugsx by typing
+		make
+
+	Once you have created the executable, you're ready to go. The
+	executable will be created in the directory in which the source
+	for bugsx resides. 
+
+10) Brief users guide
+
+	You can get a list of supported options by typing one of the
+	following:
+		bugsx -?
+		bugsx -help
+		bugsx help
+
+	Once you start bugsx, you get the main window containing 
+	the menu options at the top and the evenly distributed drawing 
+	windows below the menus. 
+
+	The Menus are:
+
+		Initialize - Initializes the gene pool 
+		Breed 	   - Breed the selected organisms.  
+		Quit       - exits bugsx
+
+	Once you have chosen "Initialize" and the first set of drawings 
+	is shown, you can select the ones you wish to be included in 
+	the cross-breeding by clicking (with the left button) on a 
+	drawing window. The selected organisms will be drawn inverse. 
+
+	Clicking on Breed will cross breed the selected organisms using 
+	the genetic algorithm. If you have not selected at least two 
+	organisms, a set of at least two will be randomly chosen and 
+	used for the breeding. 
+
+	The following keys can be used to control bugsx:
+		q - quit bugsx 
+		i - initialize population
+		b - breed
+
+	Interesting/useful sample settings:
+		bugsx -interval 3 -number 4 -batch -nobreed -segments 500
+		bugsx -interval 3 -batch -showbreed 
+		bugsx -seed 10 
+
+
+10) Command line parameters
+
+	bugsx accepts the following parameters as command line options:
+
+	+rv 			reverse video (use to override xrdb entry)
+	+synchronous		syncronous mode (use to override xrdb entry)
+	-? 			help
+	-background <arg>	backgound color
+	-batch 			run program in batch mode
+	-bg <arg> 		same as -background
+	-bordercolor <arg>	border color
+	-borderwidth <arg> 	border width
+	-cycle <arg>		re-initialize population after n batch turns
+	-display 		display
+	-extend_print		show extended reproduction info while running
+	-fg <arg>		same as -forground
+	-font <arg>		font
+	-foreground <arg>	forground color (also file system bar color)
+	-geometry <arg>		geometry 
+	-help 			help
+	-iconic			iconic
+	-interval <arg>		interval used per turn
+	-mb			show menu border
+	-name <arg>		run bugsx under this name
+	-nobreed 		do not breed when running in batch mode
+	-number <arg>		number of biomorphs to draw (must be a square #)
+	-printpop		print the population when breeding
+	-rv 			reverse video
+	-seed <arg>		use this seed for random number generator
+	-segments <arg>		use this many segments to draw an organism
+	-showbreed		show breeding subpopulation when in batch mode
+	-showgenes		show a graphic representation of the genes
+	-synchronous		synchronous mode
+	-v 			verbose
+	-xrm			make no entry in resrouce database
+	help 			help
+
+
+11) XResources 
+
+        bugsx recognizes the following XResources. Usually bugsx will search 
+	for resources under the program name but you can override this with 
+	the -name flag. If you do not wish to use a specific application 
+	defaults file, you can execute xrdb -merge to merge your resource 
+	specifications into the XResource database. 
+
+	bugsx first checks in the directory pointed at by the environment 
+	variable XAPPLRESDIR. If this doesn't yield any resource definitions 
+	it checks the APP_DEFAULTS_DIR. This is defined in your headers or 
+	in bugsx.h. If you want to change this you'll have to recompile bugsx.
+
+	background		universal backgound color
+	batch			run program in batch mode
+	batchbreed		do not breed when running in bactch mode
+	borderColor		border color
+	borderWidth		border width
+	cycle			re-initialize population after n batch turns
+	display			display
+	extend_print		show extended reproduction info while running
+	font			font
+	foreground		universal foreground color 
+	help			show help
+	mainWin.geometry	main window geometry
+	iconic			start program in iconic mode 
+	interval		interval used per turn
+	minimize		minimize window size 
+	menuborder		draw menu borders
+	name			run bugsxunder this name
+	number			number of biomorphs to draw (must be a square #)
+	printpop		print the population when breeding
+	reverseVideo		reverse video
+	seed			use this seed for random number generator
+	segments		use this many segments to draw an organism
+	showbreed		show breeding subpopulation when in batch mode
+	showgenes		show a graphic representation of the genes
+	synchronous		syncronous mode
+	verbose			verbose mode 
+	
+12) Troubleshooting
+
+	Problem: Compile failes with a problem with the catlist() function
+		definition.
+	Solution: In terms of portability this is the most fragile part 
+		of bugsx. I've done my best to make this portable, but 
+		there may be systems whose compiler simply throws up once 
+		he sees catlist. If you do have problems with catlist(), 
+		there are a number of things you can try:
+		1) Try using another compiler (gcc generally accepts the 
+		catlist() function as-is). 
+		2) Undef/Define  __STDC__ in your compiler directives. Most 
+		compilers do this via the -U flag. 
+		If these fail, you'll have to adapt catlist() for your 
+		machine. In that case, accept my apologies for the problems
+		and please send me a mail telling me what you did so that I 
+		can integrate your fix into the sources, sparing others of 
+		this misery.
+
+	Problem: Bugsx won't find my resource definitions.
+	Solution: Bugsx handles resources as follows:
+		a) bugsx checks in the directory pointed at by the environment 
+		   variable XAPPLRESDIR. If this doesn't yield any resource 
+		   definitions we go to step b. If bugsx ignores your personal 
+		   resrource definitions, make sure you have XAPPLRESDIR 
+		   set to the proper value and exorted. 
+	        b) bugsx checks the APP_DEFAULTS_DIR. This is defined in your 
+		   headers or in bugsx.h. If you want to change this you'll 
+		   have to recompile bugsx.
+		The reasoning behind this approach is to allow user preferences 
+		to take preference over the system preferences. 
+
+	Problem: Bugsx seems to start OK but I don't get the window.
+	Solution: Check if your DISPLAY variable is set correctly (you
+		can always use the -v falg to see if it does start up 
+		correctly).
+
+13) I've found a bug. What now?
+
+	Read section 11 (Troubeshooting) to see if it falls under one of
+	the problems listed there. If not either fix it yourself or mail
+	me. If my time allows it, I'll try to fix things.  
+
+14) I've come up with a feature which I think would be useful.
+
+	Here again you can do 2 things:
+		1) Implement it yourself. If you do this then
+		reread section 5 (What if you change the program?)
+		to get an idea what I would like you to do with the
+		result.
+		2) Mail me. I'll consider it and if I agree with you
+		will implement it whenever I find time.
+
+15) I would like to receive future releases of bugsx.
+
+	Send me mail telling me that. Somewhere in the mail *list* 
+	the email address you want to receive future releases at. 
+
+16) I'm extatic about this wonderful program. How can I make the author happy?
+
+	If you really feel this way, how about a short mail message
+	telling me that you are happy about using bugsx. If you're 
+	really, really extatic, send me a postcard to this address:
+
+	Steneveld 26
+	6715 HB Ede
+	Holland
+
+17) I hate this worthless program. It ruins my day.
+
+	Don't use it. Don't mail me!
+
+18) Credits
+
+	Much (maybe even most) of this program is based on the program 
+	BUGS, written by Joshua R. Smith sometime 1990. I've rewritten 
+	the code to run under XWindows, fixed some minor things and 
+	added some options (both user interface wise as well as in the 
+	breeding/mutation possiblities) here and there to make it more 
+	fun to play with bugsx, but the basic engine is adapted from 
+	the original BUGS version. If you are interested in other 
+	BUGS ports, mail Joshua (jrs@media.mit.edu) about this or visit
+	his web page at:
+		http://physics.www.media.mit.edu/~jrs/biomorphs.ps

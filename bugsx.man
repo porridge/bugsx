@@ -1,0 +1,125 @@
+.TH BUGSX 1 X11
+.SH NAME
+bugsx \- display and evolve biomorphs
+.SH DESCRIPTION
+bugsx runs under MIT's X11 window system. It was written under
+UNIX but should be easily portable.  It is a program which draws
+the biomorphs based on parametric plots of Fourier sine and cosine
+series and let's you play with them using the genetic algorithm.
+.PP
+The original version which ran under Suntools and XViews was
+written by Joshua R. Smith sometime 1990. See the 'credits'
+section for more details.
+.PP
+For more information about the theoretic backgrounds of
+bugsx consult Joshua R. Smith's paper distributed with this
+program (in postscript format). It can also be gotten from:
+http://physics.www.media.mit.edu/~jrs/biomorphs.ps
+.SH COMMAND LINE PARAMETERS
+.PP
+bugsx accepts the following command line options:
+
+.nf
+        +rv                     reverse video (use to override xrdb entry)
+        +synchronous            syncronous mode (use to override xrdb entry)
+        -?                      help
+        -background <arg>       backgound color
+        -batch                  run program in batch mode
+        -bg <arg>               same as -background
+        -bordercolor <arg>      border color
+        -borderwidth <arg>      border width
+        -display                display
+        -extend_print           show extended reproduction info while running
+        -fg <arg>               same as -forground
+        -font <arg>             font
+        -foreground <arg>       forground color (also file system bar color)
+        -geometry <arg>         geometry (will override extreme window sizes to
+                                apply reasonable settings)
+        -help                   help
+        -iconic                 iconic
+        -interval <arg>         interval used per turn
+        -mb                     show menu border
+        -name <arg>             run bugsx under this name
+        -nobreed                do not breed when running in bactch mode
+        -number <arg>           number of biomorphs to draw (must be a square #)
+        -printpop               print the population when breeding
+        -rv                     reverse video
+        -seed <arg>             use this seed for random number generator
+        -segments <arg>         use this many segments to draw an organism
+        -showbreed              show breeding subpopulation when in batch mode
+	-showgenes		show a graphic representation of the genes
+        -synchronous            synchronous mode
+        -v                      verbose
+        -xrm                    make no entry in resrouce database
+        help                    help
+
+.fi
+
+.SH RESOURCES
+.PP
+bugsx can be controlled via the following resources:
+
+.nf
+        background              universal backgound color
+        batch                   run program in batch mode
+        batchbreed              do not breed when running in bactch mode
+        borderColor             border color
+        borderWidth             border width
+        display                 display
+        extend_print            show extended reproduction info while running
+        font                    font
+        foreground              universal foreground color
+        help                    show help
+        mainWin.geometry        main window geometry
+        iconic                  start program in iconic mode
+        interval                interval used per turn
+        minimize                minimize window size
+        menuborder              draw menu borders
+        name                    run bugsxunder this name
+        number                  number of biomorphs to draw (must be a square #)
+        printpop                print the population when breeding
+        reverseVideo            reverse video
+        seed                    use this seed for random number generator
+        segments                use this many segments to draw an organism
+        showbreed               show breeding subpopulation when in batch mode
+	showgenes		show a graphic representation of the genes
+        synchronous             syncronous mode
+        verbose                 verbose mode
+
+.fi
+.PP
+.SH BRIEF USER'S GUIDE
+Once you have started bugsx you will get a window containing 
+the drawing windows and 3 menus. The Menus are:
+
+.nf
+	Initialize - Initializes the gene pool
+	Breed	   - Breed the selected organisms
+	Quit       - exits bugsx
+.fi
+.PP
+Once you have chosen "Initialize" and the first set of drawings
+is shown, you can select the ones you wish to be included in
+the cross-breeding by clicking (with the left button) on a
+drawing window. The selected organisms will be drawn inverse.
+.PP
+Clicking on Breed will cross breed the selected organisms using
+the genetic algorithm. If you have not selected at least two
+organisms, a set of at least two will be randomly chosen and
+used for the breeding.
+.PP
+The following keys can be used to control bugsx:
+
+.nf
+	q - quit bugsx
+	i - initialize population
+	b - breed
+.fi
+.SH AUTHOR
+bugsx was written by Joshua R. Smith (jrs@media.mit.edu) and ported to 
+XWindows by Robert Gasch (Robert_Gasch@peoplesoft.com) and is copyright by the 
+author(s).
+.SH CREDITS
+The strstr() used for DYNIX ports is a slightly modified version
+of the GNU source.
+

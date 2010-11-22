@@ -1,0 +1,19 @@
+This distribution contains the following files:
+
+ Name			Amount			Description
+------------------------------------------------------------
+Imakefile		1			Imakefile
+Makefile.std		1			sample Makefile
+Manifest		1			This shipping list
+Copyright		1			Copyright Notice
+README			1			Docs/User's Guide
+bugsx.ps.gz		1			gzipped Postscript Tech Report 
+bugsx.man		1			Man page
+bugsx.lsm		1			LSM page for bugsx
+bugsx.h			1			definitions
+bugsx.c			1			main() 
+breed.c			1			breeding routines
+grow.c			1			drawing routines
+noise.c			1			random noise generator
+util.c			1			general utilities
+xbutil.c		1			X related utilities

@@ -1,0 +1,55 @@
+/* ************************************************************************* *
+   bugsx - (C) Copyright 1990-1997 Joshua R. Smith (jrs@media.mit.edu)
+	   http://physics.www.media.mit.edu/~jrs
+
+	   (C) Copyright 1995-1997  Robert Gasch (Robert_Gasch@peoplesoft.com)
+	   http://www.peoplesoft.com/peoplepages/g/robert_gasch/index.htm
+
+   Permission to use, copy, modify and distribute this software for any 
+   purpose and without fee is hereby granted, provided that this copyright
+   notice appear in all copies as well as supporting documentation. All
+   work developed as a consequence of the use of this program should duly
+   acknowledge such use.
+
+   No representations are made about the suitability of this software for
+   any purpose. This software is provided "as is" without express or implied 
+   warranty.
+
+   See the GNU General Public Licence for more information.
+ * ************************************************************************* */
+
+
+
+# basic definitions for the Imake. Call xmkmf to generate the makefile.
+# If you do not have xmkmf installed use Makefile.std to make your 
+# own custom makefile. 
+
+CC=cc
+LOCAL_LIBRARIES = $(XLIB) -lm
+CCOPTIONS = -O2
+
+EXTRA_DEFINES                 = -DAPP_DEFAULTS_DIR=\"$(XAPPLOADDIR)/\"
+
+
+##############################################################################
+#!!!!!!!!!!!!!!!!!!!!!!! Do not edit below this point !!!!!!!!!!!!!!!!!!!!!!!#
+##############################################################################
+
+OBJS = bugsx.o xbutil.o util.o breed.o grow.o noise.o
+SRCS = bugsx.c xbutil.o util.c breed.c grow.c noise.c
+
+INCLUDES = -I$(TOP) -I$(TOP)/X11
+
+ComplexProgramTarget(bugsx)
+
+bugsx.o: bugsx.c bugsx.h
+xbutil.o: xbutil.c bugsx.h
+util.o: util.c bugsx.h
+breed.o: breed.c bugsx.h
+grow.o: grow.c bugsx.h
+noise.o: noise.c bugsx.h
+
+archive: 
+	$(HOME)/sh/makeshar COPYING Copyright Imakefile Makefile.std \
+	Manifest README breed.c bugsx.ps.gz bugsx.c bugsx.h bugsx.man \
+	grow.c noise.c util.c xbutil.c > bugsx.shar
