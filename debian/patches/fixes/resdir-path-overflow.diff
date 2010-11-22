@@ -1,0 +1,34 @@
+From: Marcin Owsiany <porridge@debian.org>
+Subject: [PATCH] Prevent buffer overflow on path creation
+
+Change the way the path to resource directory is created, introducing a length
+check and preventing a buffer overflow. This is not a security issue as it does
+not provide privilege escalation.
+
+Signed-off-by: Marcin Owsiany <porridge@debian.org>
+
+---
+ xbutil.c |    8 +++++---
+ 1 files changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/xbutil.c b/xbutil.c
+index 0e1ebb4..26315e1 100644
+--- a/xbutil.c
++++ b/xbutil.c
+@@ -167,9 +167,11 @@ XrmDatabase commandlineDB;
+ 	/* *** Load the local app-defaults file. *** */
+ 	if (getenv ("XAPPLRESDIR"))
+ 		{
+-		strcpy(name, getenv ("XAPPLRESDIR"));
+-		strcat(name, "/");
+-		strcat(name, CLASS_NAME);
++		if (snprintf(name, sizeof(name), "%s/" CLASS_NAME, getenv("XAPPLRESDIR")) >= sizeof(name))
++			{
++			fprintf(stderr, "snprintf: XAPPLRESDIR too long");
++			exit(EXIT_FAILURE);
++			}
+ 		resourceDB = XrmGetFileDatabase(name);
+ 		if (resourceDB)
+ 			sprintf (msg, 
+-- 
+tg: (ec08e43..) fixes/resdir-path-overflow (depends on: upstream)

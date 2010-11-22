@@ -1,0 +1,3 @@
+fixes/manpage-section.diff -p1
+fixes/resdir-path-overflow.diff -p1
+fixes/typos.diff -p1

@@ -1,0 +1,26 @@
+From: Marcin Owsiany <porridge@debian.org>
+Subject: [PATCH] fix some typos
+
+Found by debhelper :-)
+
+Signed-off-by: Marcin Owsiany <porridge@debian.org>
+
+---
+ xbutil.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/xbutil.c b/xbutil.c
+index 0e1ebb4..2a1e561 100644
+--- a/xbutil.c
++++ b/xbutil.c
+@@ -250,7 +250,7 @@ breeding output");
+ 		{
+ 		randomize_pop();
+ 		if (verbose)
+-			puts("-batch flag caught - will run programm in batch \
++			puts("-batch flag caught - will run program in batch \
+ mode");
+ 		}
+ 
+-- 
+tg: (ec08e43..) fixes/typos (depends on: upstream)

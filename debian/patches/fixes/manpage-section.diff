@@ -1,0 +1,23 @@
+From: Marcin Owsiany <porridge@debian.org>
+Subject: [PATCH] Set manpage section to match its filename
+
+This sets section to 1x rather than 1
+
+Signed-off-by: Marcin Owsiany <porridge@debian.org>
+
+---
+ bugsx.man |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/bugsx.man b/bugsx.man
+index ac3962b..5e36fe8 100644
+--- a/bugsx.man
++++ b/bugsx.man
+@@ -1,4 +1,4 @@
+-.TH BUGSX 1 X11
++.TH BUGSX 1x X11
+ .SH NAME
+ bugsx \- display and evolve biomorphs
+ .SH DESCRIPTION
+-- 
+tg: (ec08e43..) fixes/manpage-section (depends on: upstream)
