@@ -2,8 +2,8 @@ Source: bugsx
 Section: non-free/math
 Priority: optional
 Maintainer: Marcin Owsiany <porridge@debian.org>
-Build-Depends: debhelper (>> 4.1), libx11-dev, xutils-dev
-Standards-Version: 3.7.0
+Build-Depends: debhelper (>> 5), libx11-dev, xutils-dev
+Standards-Version: 3.7.2
 
 Package: bugsx
 Architecture: any

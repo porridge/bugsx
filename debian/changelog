@@ -1,3 +1,16 @@
+bugsx (1.08-10) unstable; urgency=low
+
+  * Patched xbutil.c to avoid a buffer overflow (closes: 431374)
+  * Fixed the menu file (outdated path, missing quotes). Also changed section
+    to Games/Toys, since it's not really a math application as such
+  * Bumped Standards-Version to 3.7.2 (no changes needed)
+  * Fixed section in manpage to 1x to match filename
+  * Updated DH compat version and build-dep to 5
+  * Updated year in the copyright
+  * Added a uscan watch file (closes: 377346)
+
+ -- Marcin Owsiany <porridge@debian.org>  Mon,  2 Jul 2007 10:03:06 +0100
+
 bugsx (1.08-9) unstable; urgency=high
 
   * Transition to xorg 7 (RC, thus high urgency):

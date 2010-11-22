@@ -167,9 +167,11 @@ XrmDatabase commandlineDB;
 	/* *** Load the local app-defaults file. *** */
 	if (getenv ("XAPPLRESDIR"))
 		{
-		strcpy(name, getenv ("XAPPLRESDIR"));
-		strcat(name, "/");
-		strcat(name, CLASS_NAME);
+		if (snprintf(name, sizeof(name), "%s/" CLASS_NAME, getenv("XAPPLRESDIR")) >= sizeof(name))
+			{
+			fprintf(stderr, "snprintf: XAPPLRESDIR too long");
+			exit(EXIT_FAILURE);
+			}
 		resourceDB = XrmGetFileDatabase(name);
 		if (resourceDB)
 			sprintf (msg, 

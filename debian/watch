@@ -1,0 +1,3 @@
+version=3
+opts="uversionmangle=s/^(.)/$1./" \
+  ftp://ftp.x.org/contrib/applications/bugsx(.*)\.tgz

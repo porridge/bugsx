@@ -1,5 +1,5 @@
 ?package(bugsx):\
- needs="X11"\
- section=Apps/Math\
+ needs="x11"\
+ section="Games/Toys"\
  title="Bugsx"\
- command="/usr/bin/X11/bugsx -g +0+0"
+ command="/usr/bin/bugsx -g +0+0"
