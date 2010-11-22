@@ -2,12 +2,12 @@ Source: bugsx
 Section: non-free/math
 Priority: optional
 Maintainer: Marcin Owsiany <porridge@debian.org>
-Build-Depends: debhelper (>> 5), libx11-dev, libxext-dev, xutils-dev, quilt
+Build-Depends: debhelper (>= 7.0.50~), libx11-dev, libxext-dev, xutils-dev, quilt (>= 0.46-7~)
 Standards-Version: 3.7.3
 
 Package: bugsx
 Architecture: any
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: program to evolve biomorphs using genetic algorithms
  bugsx is a program which draws biomorphs based
  on parametric plots of Fourier sine and cosine series

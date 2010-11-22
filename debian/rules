@@ -1,67 +1,19 @@
 #!/usr/bin/make -f
-# debhelperized by Marcin Owsiany <porridge@debian.org>
-
-#export DH_VERBOSE=1
-
-ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
-    CFLAGS += -O0
-else
-    CFLAGS += -O2
-endif
-export CFLAGS
-
-# dh_strip will take care of nostrip
-
-include /usr/share/quilt/quilt.make
 -include /usr/share/topgit/tg2quilt.mk
-QUILT_STAMPFN = debian/stamp-patched
 
-build: $(QUILT_STAMPFN) build-stamp
-build-stamp:
-	dh_testdir
+%:
+	dh $@ --with quilt
+
+override_dh_auto_configure:
 	xmkmf
-	$(MAKE) CDEBUGFLAGS="-g -Wall" CCOPTIONS="$(CFLAGS)"
-	touch build-stamp
 
-clean: clean-patched unpatch
+override_dh_auto_build:
+	dh_auto_build -- CDEBUGFLAGS="-g -Wall" CCOPTIONS="$(CFLAGS)"
 
-clean-patched:
-	dh_testdir
-	dh_testroot
-	rm -f build-stamp
-	if [ -e Makefile ] ; then make distclean ; fi
-	dh_clean
-
-install: build
-	dh_testdir
-	dh_testroot
-	dh_clean -k
-	$(MAKE) install install.man DESTDIR=$(CURDIR)/debian/tmp
-	install -m 0755 -d                   $(CURDIR)/debian/tmp/usr/share/applications/
-	install -m 0644 debian/bugsx.desktop $(CURDIR)/debian/tmp/usr/share/applications/
-	install -m 0755 -d                   $(CURDIR)/debian/tmp/usr/share/pixmaps/
-	install -m 0644 debian/bugsx.xpm     $(CURDIR)/debian/tmp/usr/share/pixmaps/
-
-binary-indep: build install
-# We have nothing to do.
-
-binary-arch: build install
-	dh_testdir
-	dh_testroot
-	dh_install --sourcedir=debian/tmp
-	dh_installdocs README bugsx.ps.gz
-	dh_installchangelogs
-	dh_installmenu
-	dh_strip
-	dh_compress
-	dh_desktop
-	dh_fixperms
-	dh_installdeb
-	dh_shlibdeps
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
-
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install
+override_dh_auto_install:
+	dh_auto_install -- install install.man DESTDIR=$(CURDIR)/debian/bugsx
+	install -m 0755 -d                   $(CURDIR)/debian/bugsx/usr/share/applications/
+	install -m 0644 debian/bugsx.desktop $(CURDIR)/debian/bugsx/usr/share/applications/
+	install -m 0755 -d                   $(CURDIR)/debian/bugsx/usr/share/pixmaps/
+	install -m 0644 debian/bugsx.xpm     $(CURDIR)/debian/bugsx/usr/share/pixmaps/
 
