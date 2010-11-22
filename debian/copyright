@@ -1,19 +1,60 @@
 bugsx packaged for debian by John Lapeyre <lapeyre@physics.arizona.edu>.
-Current maintainer is Adrian Bunk <bunk@fs.tum.de>.
+Debian package maintained by:
+ - (2001) Adrian Bunk <bunk@fs.tum.de>
+ - (2003-2006) Marcin Owsiany <porridge@debian.org>
 
 Upstream location: ftp://ftp.x.org/contrib/applications
 
-
 1) Author & Copyright
 
-	bugsx was written by 
+   bugsx was written by
 
-		(C) Copyright 1995-1997 Robert Gasch (Robert_Gasch@peoplesoft.com)
-		http://www.peoplesoft.com/peoplepages/g/robert_gasch/index.htm
+           (C) Copyright 1990-1997 Joshua R. Smith (jrs@media.mit.edu)
+           http://physics.www.media.mit.edu/~jrs
 
-		(C) Copyright 1990-1997 Joshua R. Smith (jrs@media.mit.edu) 
-		http://physics.www.media.mit.edu/~jrs
+           (C) Copyright 1995-1997  Robert Gasch (Robert_Gasch@peoplesoft.com)
+           http://www.peoplesoft.com/peoplepages/g/robert_gasch/index.htm
+
+   is copyright by the author(s).
+
+2) Distribution Policy
+
+        Permission to use, copy, modify and distribute this software for
+        any purpose and without fee is hereby granted, provided that this
+        copyright notice appear in all copies as well as supporting
+        documentation. All work developed as a consequence of the use of
+        this program should duly acknowledge such use.
+
+	No representations are made about the suitability of this software for
+	any purpose. This software is provided "as is" without express or
+	implied warranty.
+
+        See the GNU General Public Licence for more information.
+
+        What does this mean?
+        This means that you can pretty much do with it what you want as
+        long as you don't charge substantially more than the distribution
+        costs for it (of course you have to make the source available).
+
+        This makes software distributions like Walnut Creek or Infomagic
+        perfectly acceptable.
+
+        It does NOT matter wether you use it at home or in a comercial
+        environment.
+
+        If you want to include it in a major commercial distribution you
+        need my permission to do so.
 
 
-This source code is copyright under the GNU Public License (GPL), a copy
-of which may be found at /usr/share/common-licenses/GPL
+A copy of the mentioned GNU General Public Licence may be found at
+/usr/share/common-licenses/GPL in Debian systems.
+
+
+A comment from the Debian maintainer:
+
+  As noted in the thread starting at
+  http://lists.debian.org/debian-legal/2006/04/msg00222.html
+  the license is not clearly stated, but to be safe, I decided to move the
+  package to non-free.
+
+ -- Marcin Owsiany <porridge@debian.org>, Fri, 28 Apr 2006 20:26:12 +0100

@@ -1,3 +1,19 @@
+bugsx (1.08-9) unstable; urgency=high
+
+  * Transition to xorg 7 (RC, thus high urgency):
+    - debian/bugsx.files: changed binary and manpage path to match new
+      standard-FHS X layout
+    - build-depend on xutils-dev for imake (closes: 364041, 348163)
+  * A proper review of the license text resulted in:
+    - added the whole text of "distribution policy" and my comment to
+      debian/copyright
+    - moved to non-free
+    - more details in thread starting at:
+      http://lists.debian.org/debian-legal/2006/04/msg00221.html
+  * Improved description synopsis a little bit
+
+ -- Marcin Owsiany <porridge@debian.org>  Fri, 28 Apr 2006 20:27:24 +0100
+
 bugsx (1.08-8) unstable; urgency=low
 
   * Change build-dependancy on xlibs-dev to libx11-dev, since the former was
