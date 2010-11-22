@@ -1,0 +1,6 @@
+From: Marcin Owsiany <porridge@debian.org>
+Subject: [PATCH] Set manpage section to match its filename
+
+This sets section to 1x rather than 1
+
+Signed-off-by: Marcin Owsiany <porridge@debian.org>
