@@ -1,3 +1,17 @@
+bugsx (1.08-7) unstable; urgency=low
+
+  * New maintainer. (closes: #86636)
+  * Now using debhelper:
+     - corrected update-menu invocation
+     - don't create/remove the /usr/doc symlink
+  * Pay attention to DEB_BUILD_OPTIONS
+  * Upgraded standards-version
+  * Moved the binary and manpage to /usr/X11R6/{bin,man} (this is
+    where the imake-generated makefile would put them) and corrected
+    the path in menu file
+
+ -- Marcin Owsiany <porridge@debian.org>  Sun, 13 Apr 2003 16:31:18 +0200
+
 bugsx (1.08-6) unstable; urgency=low
 
   * Orphaned this package.
