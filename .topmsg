@@ -1,0 +1,8 @@
+From: Marcin Owsiany <porridge@debian.org>
+Subject: [PATCH] Prevent buffer overflow on path creation
+
+Change the way the path to resource directory is created, introducing a length
+check and preventing a buffer overflow. This is not a security issue as it does
+not provide privilege escalation.
+
+Signed-off-by: Marcin Owsiany <porridge@debian.org>
