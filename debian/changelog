@@ -1,3 +1,12 @@
+bugsx (1.08-11) unstable; urgency=low
+
+  * Added a desktop file (closes: 432462) and a call to dh_desktop
+  * Switched from deprecated dh_movefiles to dh_install
+  * Added a menu icon, just a simple rescaled snapshot of a part of the
+    screen, with transparent background.
+
+ -- Marcin Owsiany <porridge@debian.org>  Fri, 10 Aug 2007 16:19:48 +0100
+
 bugsx (1.08-10) unstable; urgency=low
 
   * Patched xbutil.c to avoid a buffer overflow (closes: 431374)

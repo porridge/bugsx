@@ -31,6 +31,10 @@ install: build
 	dh_testroot
 	dh_clean -k
 	$(MAKE) install install.man DESTDIR=$(CURDIR)/debian/tmp
+	install -m 0755 -d                   $(CURDIR)/debian/tmp/usr/share/applications/
+	install -m 0644 debian/bugsx.desktop $(CURDIR)/debian/tmp/usr/share/applications/
+	install -m 0755 -d                   $(CURDIR)/debian/tmp/usr/share/pixmaps/
+	install -m 0644 debian/bugsx.xpm     $(CURDIR)/debian/tmp/usr/share/pixmaps/
 
 binary-indep: build install
 # We have nothing to do.
@@ -38,12 +42,13 @@ binary-indep: build install
 binary-arch: build install
 	dh_testdir
 	dh_testroot
-	dh_movefiles
+	dh_install --sourcedir=debian/tmp
 	dh_installdocs README bugsx.ps.gz
 	dh_installchangelogs
 	dh_installmenu
 	dh_strip
 	dh_compress
+	dh_desktop
 	dh_fixperms
 	dh_installdeb
 	dh_shlibdeps

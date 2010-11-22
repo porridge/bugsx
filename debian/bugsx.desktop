@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Bugsx 
+GenericName=Evolve biomorphs
+GenericName[pl]=Ewolucja robali
+Comment=Evolve biomorphs using genetic algorithms
+Comment[pl]=Zabawa w ewolucję owadów z użyciem algorytmów genetycznych
+Icon=bugsx.xpm
+Exec=bugsx -g +0+0
+Terminal=false
+Categories=Game;Amusement

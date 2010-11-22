@@ -1,5 +1,6 @@
 ?package(bugsx):\
  needs="x11"\
+ icon="bugsx.xpm"\
  section="Games/Toys"\
  title="Bugsx"\
  command="/usr/bin/bugsx -g +0+0"

@@ -17,7 +17,12 @@ Upstream location: ftp://ftp.x.org/contrib/applications
 
    is copyright by the author(s).
 
+   The debian packaging, including the menu icon is:
+           (C) Copyright 2007 Marcin Owsiany <porridge@debian.org>
+
 2) Distribution Policy
+
+  bugsx:
 
         Permission to use, copy, modify and distribute this software for
         any purpose and without fee is hereby granted, provided that this
@@ -45,10 +50,17 @@ Upstream location: ftp://ftp.x.org/contrib/applications
         If you want to include it in a major commercial distribution you
         need my permission to do so.
 
-
 A copy of the mentioned GNU General Public Licence may be found at
 /usr/share/common-licenses/GPL in Debian systems.
 
+  debian packaing and icon:
+
+	The debian packaging and menu icon is free software; you can
+	redistribute it and/or modify it under the terms of the GNU General
+	Public License version 2, as published by the Free Software Foundation.
+
+A copy of the mentioned GNU General Public Licence version 2 may be found at
+/usr/share/common-licenses/GPL-2 in Debian systems.
 
 A comment from the Debian maintainer:
 
