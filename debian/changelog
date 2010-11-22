@@ -1,3 +1,10 @@
+bugsx (1.08-8) unstable; urgency=low
+
+  * Change build-dependancy on xlibs-dev to libx11-dev, since the former was
+    removed from the archive. (closes: 346628)
+
+ -- Marcin Owsiany <porridge@debian.org>  Sat, 14 Jan 2006 14:08:50 +0100
+
 bugsx (1.08-7) unstable; urgency=low
 
   * New maintainer. (closes: #86636)
