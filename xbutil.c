@@ -250,7 +250,7 @@ breeding output");
 		{
 		randomize_pop();
 		if (verbose)
-			puts("-batch flag caught - will run programm in batch \
+			puts("-batch flag caught - will run program in batch \
 mode");
 		}
 

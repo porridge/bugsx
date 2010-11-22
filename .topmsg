@@ -1,0 +1,6 @@
+From: Marcin Owsiany <porridge@debian.org>
+Subject: [PATCH] fix some typos
+
+Found by debhelper :-)
+
+Signed-off-by: Marcin Owsiany <porridge@debian.org>
