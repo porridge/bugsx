@@ -22,8 +22,8 @@ build-stamp:
 clean:
 	dh_testdir
 	dh_testroot
-	-rm -f build-stamp
-	-make distclean
+	rm -f build-stamp
+	if [ -e Makefile ] ; then make distclean ; fi
 	dh_clean
 
 install: build

@@ -1,6 +1,7 @@
 ?package(bugsx):\
- needs="x11"\
+ needs="X11"\
  icon="bugsx.xpm"\
  section="Games/Toys"\
  title="Bugsx"\
+ longtitle="Evolve biomorphs using genetic algorithms."\
  command="/usr/bin/bugsx -g +0+0"
