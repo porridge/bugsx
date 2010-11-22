@@ -1,0 +1,15 @@
+Source: bugsx
+Section: math
+Priority: optional
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends: xlibs-dev, xutils
+Standards-Version: 3.1.1
+
+Package: bugsx
+Architecture: any
+Depends:  ${shlibs:Depends}
+Description: evolve biomorphs using genetic algorithms
+ buugsx is a program which draws biomorphs
+ based on parametric plots of Fourier sine and cosine
+ series and let's you play with them using genetic 
+ algorithms.

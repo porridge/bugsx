@@ -1,0 +1,5 @@
+?package(bugsx):\
+ needs="X11"\
+ section=Apps/Math\
+ title="Bugsx"\
+ command="/usr/bin/bugsx -g +0+0"

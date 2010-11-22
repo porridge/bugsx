@@ -1,0 +1,19 @@
+bugsx packaged for debian by John Lapeyre <lapeyre@physics.arizona.edu>.
+Current maintainer is Adrian Bunk <bunk@fs.tum.de>.
+
+Upstream location: ftp://ftp.x.org/contrib/applications
+
+
+1) Author & Copyright
+
+	bugsx was written by 
+
+		(C) Copyright 1995-1997 Robert Gasch (Robert_Gasch@peoplesoft.com)
+		http://www.peoplesoft.com/peoplepages/g/robert_gasch/index.htm
+
+		(C) Copyright 1990-1997 Joshua R. Smith (jrs@media.mit.edu) 
+		http://physics.www.media.mit.edu/~jrs
+
+
+This source code is copyright under the GNU Public License (GPL), a copy
+of which may be found at /usr/share/common-licenses/GPL

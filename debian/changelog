@@ -1,0 +1,47 @@
+bugsx (1.08-6) unstable; urgency=low
+
+  * Orphaned this package.
+
+ -- Adrian Bunk <bunk@fs.tum.de>  Fri, 25 Jan 2002 14:05:00 +0100
+
+bugsx (1.08-5) unstable; urgency=low
+
+  * New maintainer. (closes: #68303)
+  * Remove the Makefile in the clean target.
+  * Added "-isp" to dpkg-gencontrol in debian/rules.
+  * Strip bugsx better.
+  * /usr/doc -> /usr/share/doc
+  * /usr/man -> /usr/share/man
+  * Added build dependencies.
+  * Standards-Version: 3.1.1
+
+ -- Adrian Bunk <bunk@fs.tum.de>  Sat,  3 Feb 2001 19:47:08 +0100
+
+bugsx (1.08-4) unstable; urgency=low
+
+  * Maintainer set to Debian QA Group.
+  * Removed README.debian.
+  * Removed the emacs config directives from debian/changelog.
+
+ -- Martin Michlmayr <tbm@cyrius.com>  Fri, 22 Dec 2000 15:51:08 +0100
+
+bugsx (1.08-3) unstable; urgency=low
+
+  * link against glibc 2.1.1
+  * add to menu-system
+
+ -- John Lapeyre <lapeyre@physics.arizona.edu>  Thu, 25 Mar 1999 00:26:44 -0700
+
+bugsx (1.08-2) unstable; urgency=low
+
+  * Fixed description.
+  * fixed hardcoded egcc.
+
+ -- John Lapeyre <lapeyre@physics.arizona.edu>  Tue, 15 Sep 1998 18:59:44 -0700
+
+bugsx (1.08-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- John Lapeyre <lapeyre@physics.arizona.edu>  Tue, 25 Aug 1998 12:13:45 -0700
+
