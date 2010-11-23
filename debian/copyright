@@ -1,7 +1,7 @@
 bugsx packaged for debian by John Lapeyre <lapeyre@physics.arizona.edu>.
 Debian package maintained by:
  - (2001) Adrian Bunk <bunk@fs.tum.de>
- - (2003-2007) Marcin Owsiany <porridge@debian.org>
+ - (since 2003) Marcin Owsiany <porridge@debian.org>
 
 Upstream location: ftp://ftp.x.org/contrib/applications
 
@@ -15,7 +15,7 @@ Upstream location: ftp://ftp.x.org/contrib/applications
            (C) Copyright 1995-1997  Robert Gasch (Robert_Gasch@peoplesoft.com)
            http://www.peoplesoft.com/peoplepages/g/robert_gasch/index.htm
 
-   is copyright by the author(s).
+   and is copyright by the authors.
 
    The debian packaging, including the menu icon is:
            (C) Copyright 2007 Marcin Owsiany <porridge@debian.org>
@@ -62,11 +62,11 @@ A copy of the mentioned GNU General Public Licence may be found at
 A copy of the mentioned GNU General Public Licence version 2 may be found at
 /usr/share/common-licenses/GPL-2 in Debian systems.
 
-A comment from the Debian maintainer:
+3) Note: this package is not part of Debian GNU/Linux.
 
-  As noted in the thread starting at
+  The distribution policy mentioned above is internally inconsistent (see
+  discussion in the thread starting at
   http://lists.debian.org/debian-legal/2006/04/msg00222.html
-  the license is not clearly stated, but to be safe, I decided to move the
-  package to non-free.
+  For this reason I decided to move the package to non-free.
 
- -- Marcin Owsiany <porridge@debian.org>, Fri, 28 Apr 2006 20:26:12 +0100
+ -- Marcin Owsiany <porridge@debian.org>, Mon, 22 Nov 2010 16:18:59 -0800
