@@ -1,3 +1,14 @@
+bugsx (1.08-13) experimental; urgency=low
+
+  * Moved from monolithic patch to topgit+quilt.
+  * Moved to source format 3.0 (quilt).
+  * Started using dh.
+  * Pointed debian/copyright at GPL-1, not GPL.
+  * Mentioned non-freeness in debian/copyright.
+  * Bumped Standards-Version to 3.9.1.
+
+ -- Marcin Owsiany <porridge@debian.org>  Mon, 22 Nov 2010 18:21:12 -0800
+
 bugsx (1.08-12) unstable; urgency=medium
 
   * Added a dependency on libxext-dev, which is needed now that libx11-dev
